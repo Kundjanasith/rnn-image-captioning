@@ -1,0 +1,9 @@
+.ipynb_checkpoints
+checkpoint
+run.old.*
+
+*.pickle
+*.zip
+weights*
+*.pyc
+*.jpg
