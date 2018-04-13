@@ -6,6 +6,10 @@ The embeddings are then used to train a Recurrent Neural Network in order to gen
 
 You can find the paper [here](https://arxiv.org/pdf/1411.4555).
 
+Here's a plot of the training loss after the 12th epoch:
+
+![alt text](https://github.com/dpstart/rnn-image-captioning/blob/master/training_loss.png)
+
 ## How to run
 
 ### Notebook version
