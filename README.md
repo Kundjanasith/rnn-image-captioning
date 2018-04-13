@@ -27,3 +27,18 @@ It is also possible to skip the training of the RNN by loading the pretrained we
 * *pretrained_weights_16_epoch.tar.gz* : Weights after 16 epochs of training.
 
 Once you unzip the files, you can use: `saver.restore(s, os.path.abspath("weights_<epoch_number>"))` before applying the model in order to use the weights.
+
+
+## Examples
+
+<p align="center">
+  <img src="https://github.com/dpstart/rnn-image-captioning/blob/master/example_1.jpeg" width="350"/>
+</p>
+
+<p align="center">
+  <img src="https://github.com/dpstart/rnn-image-captioning/blob/master/example_2.jpeg" width="350"/>
+</p>
+
+<p align="center">
+  <img src="https://github.com/dpstart/rnn-image-captioning/blob/master/example_3.jpeg" width="350"/>
+</p>
