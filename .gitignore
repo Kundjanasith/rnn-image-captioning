@@ -5,3 +5,4 @@ run.old.*
 weights*
 *.pyc
 *.jpg
+captions_train-val2014.zip
