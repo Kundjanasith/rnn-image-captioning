@@ -7,7 +7,10 @@ The embeddings are then used to train a Recurrent Neural Network in order to gen
 You can find the paper [here](https://arxiv.org/pdf/1411.4555).
 
 Here's a plot of the training loss after the 12th epoch:
-<img src="https://github.com/dpstart/rnn-image-captioning/blob/master/training_loss.png" width="350"/>
+
+<p align="center">
+  <img src="https://github.com/dpstart/rnn-image-captioning/blob/master/training_loss.png" width="350"/>
+</p>
 
 
 ## How to run
