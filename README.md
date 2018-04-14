@@ -31,13 +31,13 @@ Once you unzip the files, you can use: `saver.restore(s, os.path.abspath("weight
 ## Examples
 
 <p align="center">
-  <img src="https://github.com/dpstart/rnn-image-captioning/blob/master/example_1.jpeg" width="350"/>
+  <img src="https://github.com/dpstart/rnn-image-captioning/blob/master/images/example_1.jpeg" width="350"/>
 </p>
 
 <p align="center">
-  <img src="https://github.com/dpstart/rnn-image-captioning/blob/master/example_2.jpeg" width="350"/>
+  <img src="https://github.com/dpstart/rnn-image-captioning/blob/master/images/example_2.jpeg" width="350"/>
 </p>
 
 <p align="center">
-  <img src="https://github.com/dpstart/rnn-image-captioning/blob/master/example_3.jpeg" width="350"/>
+  <img src="https://github.com/dpstart/rnn-image-captioning/blob/master/images/example_3.jpeg" width="350"/>
 </p>
