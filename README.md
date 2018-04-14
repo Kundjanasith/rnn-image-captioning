@@ -23,8 +23,7 @@ In order to skip the feature generation for the CNN, you can download the pickle
 
 It is also possible to skip the training of the RNN by loading the pretrained weights that you can find in this repo:
 
-* *pretrained_weights_14_epoch.tar.gz* : Weights after 14 epochs of training.
-* *pretrained_weights_16_epoch.tar.gz* : Weights after 16 epochs of training.
+* *final_weights.zip* : Weights after 16 epochs of training.
 
 Once you unzip the files, you can use: `saver.restore(s, os.path.abspath("weights_<epoch_number>"))` before applying the model in order to use the weights.
 

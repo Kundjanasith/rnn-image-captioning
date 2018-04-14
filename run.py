@@ -399,8 +399,14 @@ n_validation_batches = 100  # how many batches are used for validation after eac
 
 skip_training = True
 
+def load_final_weights():
+    print("Loading trained weigths...")
+    with zipfile.ZipFile("final_weights.zip", "r") as zip_f:
+        zip_f.extractall("./tmp")
+    saver.restore(s, os.path.abspath("tmp/weights_final"))
+
 if skip_training:
-    saver.restore(s, os.path.abspath("final_weights/weights"))
+    load_final_weights()
 
 
 # actual training loop
@@ -469,14 +475,19 @@ def check_after_training(n_examples):
 check_after_training(5)
 
 
-# save graph weights to file!
-saver.save(s, os.path.abspath("final_weights/weights"))
+# save graph weights to file if we did training
+if not skip_training:
+    saver.save(s, os.path.abspath("tmp/weigths_final"))
+    with zipfile.ZipFile("final_weigths.zip", "w") as zip_f:
+        zip_f.write("tmp/weigths_final.meta")
+        zip_f.write("tmp/weigths_final.index")
+        zip_f.write("tmp/weigths_final.data-00000-of-00001")
 
 
 class final_model:
     # CNN encoder
     encoder, preprocess_for_model = get_cnn_encoder()
-    saver.restore(s, os.path.abspath("final_weights/weights"))  # keras applications corrupt our graph, so we restore trained weights
+    load_final_weights()  # keras applications corrupt our graph, so we restore trained weights
 
     # containers for current lstm state
     lstm_c = tf.Variable(tf.zeros([1, LSTM_UNITS]), name="cell")
@@ -570,7 +581,6 @@ def show_valid_example(val_img_fns, example_idx=0):
     apply_model_to_image_raw_bytes(zf.read(example))
 
 #show_valid_example(val_img_fns, example_idx=58)
-
 
 for img in os.listdir("images"):
     if img.endswith(".jpg") or img.endswith(".jpeg"):
